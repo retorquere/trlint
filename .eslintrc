@@ -1,0 +1,37 @@
+{
+	"env": {
+		"browser": true,
+		"es2018": true
+	},
+	"extends": [
+		"@zotero"
+	],
+	"globals": {
+		"Zotero": "readonly",
+		"Z": "readonly",
+		"ZU": "readonly",
+		"attr": "readonly",
+		"innerText": "readonly",
+		"text": "readonly",
+		"request": "readonly",
+		"requestText": "readonly",
+		"requestJSON": "readonly",
+		"requestDocument": "readonly"
+	},
+	"rules": {
+		"no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^detectWeb$|^doWeb$|^detectImport$|^doImport$|^doExport$|^detectSearch$|^doSearch$|^exports$"
+			}
+		],
+
+		"no-redeclare": ["error", {"builtinGlobals": true}]
+
+	},
+	"plugins": [
+		"zotero-translator"
+	],
+	"processor": "zotero-translator/translator",
+}

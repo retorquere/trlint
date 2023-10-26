@@ -33,5 +33,5 @@
 	"plugins": [
 		"zotero-translator"
 	],
-	"processor": "zotero-translator/translator",
+	"parser": "./.ci/eslint-plugin-zotero-translator/lib/parser/index.js"
 }
